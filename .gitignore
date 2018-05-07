@@ -1,3 +1,5 @@
 *.db
 *.o
 *.bak
+*.dll
+*.so

@@ -6,10 +6,10 @@
 (define well-class%
   (class object%
     (init-field
-     name     ; Name of well 
-     x        ; X coordinate
-     y        ; Y coordinate
-     rw       ; Radius of well
+     [name "well name"] ; Name of well 
+     [x 0]              ; X coordinate
+     [y 0]              ; Y coordinate
+     [rw 1.0]           ; Radius of well
      [h0 (make-object transient-parameter-linear% 0 0)] ; Initial water level
      [c (make-object transient-parameter-linear% 0 0)]  ; Turbulant well loss
      [b (make-object transient-parameter-linear% 0 0)]  ; Laminar well loss

@@ -1,6 +1,7 @@
 #lang racket
 
-(provide distance-xy)
+(provide distance-xy
+         vector-insert)
 
 (define (sum-of-squares x1 x2)
   (+ (* x1 x1) (* x2 x2)))
@@ -10,3 +11,6 @@
         [dy (- y2 y1)])
     (sqrt (sum-of-squares dx dy))))
 
+(define (vector-insert v idx value)
+  (let-values ([(fst lst) (vector-split-at v idx)])
+    (vector-append fst (vector value) lst)))

@@ -1,4 +1,9 @@
 MAKE = mingw32-make
 
+all: libawfm awfm
+
 libawfm:
-	$(MAKE) -C c clean
+	cd c; mingw32-make; cd ..
+
+awfm:
+	cd rkt; mingw-make; cd ..
