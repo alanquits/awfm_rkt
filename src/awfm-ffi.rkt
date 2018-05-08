@@ -5,7 +5,7 @@
 
 (provide W)
 
-(define-ffi-definer define-awfm (ffi-lib "libawfm.dll"))
+(define-ffi-definer define-awfm (ffi-lib "libawfm"))
 
 (define-awfm W (_fun _double -> _double))
 (define-awfm K0 (_fun _double -> _double))
